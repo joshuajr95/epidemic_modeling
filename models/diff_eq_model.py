@@ -17,7 +17,7 @@ class Model:
     def __init__(self):
         pass
     
-    def run():
+    def run_simulation(*args, **kwargs):
         pass
     
     def graph():
