@@ -1,0 +1,16 @@
+
+Agent is independent object that implements all of the functions necessary to 
+implement the simulation. This includes movement, change of infection status,
+possible death, etc.
+
+Agent manager can be used to run simulation for some number of agents by calling
+methods to update agent's position and infection status.
+
+Simulation manager runs the simulation for all of the agent managers and
+interfaces with the database
+
+Could have ability to interface with external databases that are provided by
+the user, both for outputting the simulation data and for inputting simulation
+parameters (like mobility data) or testing simulation against real-world data.
+
+May help to have command line tools to run the simulation as well.

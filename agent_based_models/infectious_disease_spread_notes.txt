@@ -1,0 +1,44 @@
+
+Types of Models:
+
+Compartmental models i.e. SIR, SID, SIRV, etc.
+Probabilistic models (Markov chains)
+Agent-based models, but will probably use Markov chain techniques
+
+
+IDEA: Use agent-based technique, but the underlying state transition
+    diagram will be approximately a Markov chain over the SIR, etc. states.
+    Since using agent-based model, the Markov assumption will not hold though
+
+
+Disease parameters:
+
+beta - number of susceptible people infected per unit time
+gamma - number of infected people recovered per unit time
+d - number of infected people who die per unit time
+r - number of recovered people reinfected per unit time
+vs - number of susceptible people vaccinated per unit time
+vr - number of recovered people vaccinated per unit time
+rv - number of vaccinated people reinfected per unit time
+
+
+Human motion simulation:
+
+use real mobility data and generate mobility matrix for probability
+of movement from one square to another and use inverse transform method (? maybe)
+to randomly walk the agent between squares.
+
+Inter-city travel will have to be simulated in a different way using either
+the Newtonian inverse distance-squared model or some more complicated model.
+
+Infection probability in a given square will be proportional to the number of
+people in the square divided by the square size times some constant. Possibly
+use the Venables distance here.
+
+
+Collecting Data from Simulation:
+
+Need for a publish-subscribe framework in order to allow scalability of data
+recording, and for flexibility and user-definition of data to be recorded. This
+will make it usable for many different types of agent-based models.
+

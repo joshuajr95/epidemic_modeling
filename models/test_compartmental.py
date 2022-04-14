@@ -21,7 +21,7 @@ def test_simulation():
     #model2.graph(S, I, D)
 
     model3 = SIR_Model_With_Reinfection()
-    simulation_results = model3.run_simulation(10, 1000, 10000, delta_t=0.1, beta=0.4, alpha=0.1, birth_rate=5.0/10000, death_rate=3.0/10000)
+    simulation_results = model3.run_simulation(10, 1000, 10000, delta_t=0.1, beta=0.4, alpha=0.1, e=0.05, birth_rate=5.0/10000, death_rate=3.0/10000, grace_period=60)
     model3.graph(simulation_results.S, simulation_results.I, simulation_results.R)
 
 
